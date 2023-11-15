@@ -1,17 +1,18 @@
 import { useState } from 'react';
-import { View, ScrollView, SafeAreaView } from 'react-native';
+import { View, ScrollView, SafeAreaView, Text } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 
 import { COLORS, icons, images, SIZES } from '../constants';
 import { ScreenHeaderBtn, Welcome } from '../components'
 import { Footer } from '../components/common/footer/Footer'
+import { Image } from '@gluestack-ui/themed';
 
 const Home = () => {
 
     const router = useRouter();
 
-    return(
-        <SafeAreaView style={{flex: 1, backgroundColor: COLORS.black2 }}>
+    return (
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black2 }}>
             <Stack.Screen
                 options = {{
                     headerStyle: {backgroundColor: COLORS.teal},
@@ -28,17 +29,18 @@ const Home = () => {
                 
             />
 
-            <ScrollView showVerticalScrollIndicator = {false}>
+
+            <ScrollView showVerticalScrollIndicator={false}>
                 <View
-                    style = {{
+                    style={{
                         flex: 1,
                         padding: SIZES.medium
                     }}
-                    >
-                        <Welcome
-                        
-                        />
-                    </View>
+                >
+                    <Welcome
+
+                    />
+                </View>
             </ScrollView>
 
         </SafeAreaView>
