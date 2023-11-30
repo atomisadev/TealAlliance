@@ -6,38 +6,38 @@ import { COLORS, icons, images, SIZES } from '../constants';
 import { ScreenHeaderBtn, Welcome, Scouting_basic_info } from '../components'
 import { Footer } from '../components/common/footer/Footer'
 
-export default function Home(){
+export default function Home() {
 
     const router = useRouter();
 
-    return(
-        <SafeAreaView style={{flex: 1, backgroundColor: COLORS.black2 }}>
+    return (
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black2 }}>
             <Stack.Screen
-                options = {{
-                    headerStyle: {backgroundColor: COLORS.teal},
+                options={{
+                    headerStyle: { backgroundColor: COLORS.teal },
                     headerShadowVisible: false,
                     headerLeft: () => (
-                        <ScreenHeaderBtn iconUrl={icons.menu} dimension = "125%" />
+                        <ScreenHeaderBtn iconUrl={icons.menu} dimension="125%" />
                     ),
                     headerRight: () => (
-                        <ScreenHeaderBtn iconUrl={images.tvhead} dimension = "225%" />
+                        <ScreenHeaderBtn iconUrl={images.tvhead} dimension="225%" />
                     ),
                     headerTitle: "Home"
                 }}
-                
+
             />
 
-            <ScrollView showVerticalScrollIndicator = {false}>
+            <ScrollView showVerticalScrollIndicator={false}>
                 <View
-                    style = {{
+                    style={{
                         flex: 1,
                         padding: SIZES.medium
                     }}
-                    >
-                        <Welcome
-                        
-                        />
-                    </View>
+                >
+                    <Welcome
+
+                    />
+                </View>
             </ScrollView>
 
         </SafeAreaView>
