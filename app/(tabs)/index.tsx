@@ -1,24 +1,26 @@
-import { Button, StyleSheet } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import ButtonList from "../../components/ButtonList";
 
-import EditScreenInfo from "../../components/EditScreenInfo";
-import { Text, View } from "../../components/Themed";
+export default function TabTwoScreen() {
+  const buttons = {
+    "Stand Scouting": "https://google.com",
+    "Pit Scouting": "https://bing.com",
+    "Stand Admin": "https://duckduckgo.com",
+    "Drive Team View": "https://classroom.google..com",
+  };
 
-export default function TabOneScreen() {
   return (
-    <View className="flex justify-center h-screen items-center bg-white">
-      <Text className="text-2xl text-red-500 font-bold">Bigger</Text>
-      <View
-        // style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <Button
-        title="Some"
-        onPress={() => console.log("Hello world")}
-        color="#841584"
-      />
-
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+    <View style={styles.container}>
+      <ButtonList buttons={buttons} />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
